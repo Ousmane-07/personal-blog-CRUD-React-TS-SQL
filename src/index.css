@@ -1,111 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  /* neutral colors */
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --neutral-900:#1c1A19;
+  --neutral-800:#201E1D;
+  --neutral-700:#34302D;
+  --neutral-600:#4A4846;
+  --neutral-400:#C0BFBF;
+  --neutral-300:#DEDCDA;
+  --neutral-200:#EFEDEB;
+  --neutral-100:#FBF9F7;
+  --neutral-0:#FFFFFF;
 
-  @media (max-width: 1024px) {
-    font-size: 16px;
+  /* blue colors */
+
+  --blue-200:#E1F1FE;
+  --blue-500:#93CEFC;
+  --blue-700:#75B0DE;
+  --blue-800: #5792C0;
+  --blue-900:#022B4A;
+
+  /* green colors */
+
+  --green-200:#E9F5EA;
+  --green-500:#9DD3A9;
+  --green-700:#008531;
+  --green-900:#132A18;
+
+  /* yellow colors */
+
+  --yellow-200:#FFF5E1;
+  --yellow-500:#FACC79;
+  --yellow-700:#EA9806;
+  --yellow-900: #4A3003;
+
+  /* red colors */
+
+  --red-400:#F04438;
+  --red-600:#D92D20;
+
+  /* FONT SIZES */ 
+
+  --fs-40: calc(40 / 16 * 1rem);
+  --fs-32: calc(32 / 16 * 1rem);
+  --fs-28: calc(28 / 16 * 1rem);
+  --fs-24: calc(24 / 16 * 1rem);
+  --fs-20: calc(20 / 16 * 1rem);
+  --fs-18: calc(18 / 16 * 1rem); /* MEDIUM & REGULAR FONT-WEIGHT */
+  --fs-16: calc(16 / 16 * 1rem);
+ 
+  
+}
+
+
+
+.dark-mode,
+.light-mode { 
+    min-height: 100vh;
+    font-family: 'DM Sans', sans-serif;
+    background:var(--background-color);
+}
+
+/* DARK MODE */ 
+
+  .light-mode { 
+    --background-color:var(--neutral-100);
+    --navigation-bar-color:var(--neutral-0);
+    --font-header-color:var(--neutral-700);
+    --font-paragraph-color:var(--neutral-600);
+    --stroke-color:var(--neutral-200); 
+
   }
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+  .dark-mode { 
+    --background-color:var(--neutral-900);
+    --navigation-bar-color:var(--neutral-800);
+    --font-header-color:var(--neutral-0);
+    --font-paragraph-color:var(--neutral-400);
+    --stroke-color:var(--neutral-700);
+
   }
 
-  #social .button-icon {
-    filter: invert(1) brightness(2);
+  img { 
+    max-width:100%;
+    height: auto;
   }
+
+body { 
+  font-family: 'DM Sans', sans-serif;
+  background-color:var(--neutral-100);
 }
 
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
-
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
-}
-
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
-}
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-p {
-  margin: 0;
-}
-
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
-}
