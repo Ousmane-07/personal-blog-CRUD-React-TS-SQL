@@ -1,15 +1,18 @@
 .nav-wrapper { 
     padding:20px 348px;  
+
 }
 
 .nav-container { 
-    background:var(--neutral-0);
+    background:var(--navigation-bar-color);
     display:flex;
     justify-content:space-between;
     align-items:center;
     padding:3px 5px;
-    border:1px solid var(--neutral-200);
+    border:2px solid var(--stroke-color);
     border-radius:8px;
+    max-width:640px;
+    margin:0 auto;
 }
 
 .links { 
@@ -29,16 +32,22 @@
 
 .links p { 
     font-size:var(--fs-16);
-    color:var
+    color:var(--neutral-600);
+    cursor:pointer;
 }
 
 .theme-container { 
     width:40px;
     height:40px;
-    background:var(--neutral-100);
+    background:var(--background-color);
     border-radius:8px;
-    border:1px solid var(--neutral-200);
+    border:1px solid var(--stroke-color);
     display:flex;
     justify-content:center;
     align-items:center;
+    cursor:pointer;
+}
+
+.theme-container img { 
+    cursor:pointer;
 }
