@@ -34,6 +34,7 @@
     font-size:var(--fs-16);
     color:var(--neutral-600);
     cursor:pointer;
+    text-decoration:none;
 }
 
 .theme-container { 
