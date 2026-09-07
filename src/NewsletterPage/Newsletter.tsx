@@ -4,6 +4,7 @@ function Newsletter() {
 
     return( 
         <> 
+        Newsletter
         </>
     )
 }

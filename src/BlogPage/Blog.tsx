@@ -5,6 +5,7 @@ function Blog() {
 
     return ( 
         <>
+        Blog
         </>
     )
 }
