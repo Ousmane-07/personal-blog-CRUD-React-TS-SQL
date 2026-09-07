@@ -1,3 +1,4 @@
+import { Routes, Route } from "react-router-dom"
 import Navbar from './Navigation/Nav.tsx'
 import {useState} from 'react'
 import './App.css'
@@ -5,7 +6,7 @@ import './App.css'
 function App() {
 
   const [isDark, setDark] = useState<boolean>(false)
-
+  
   function toggleTheme() { 
     setDark(!isDark)
 
@@ -16,6 +17,9 @@ function App() {
       <Navbar 
       toggleTheme = {toggleTheme}
       isDark = {isDark}/>
+      <Routes>
+        <Route></Route>
+      </Routes>
       </div>
     </>
   )
