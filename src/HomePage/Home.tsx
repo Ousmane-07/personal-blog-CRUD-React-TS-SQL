@@ -1,3 +1,8 @@
+import Twitter from '../assets/images/logo-x.svg?react'
+import GitHub from '../assets/images/logo-github.svg?react'
+import LinkedIn from '../assets/images/logo-linkedin.svg?react'
+import FrontEnd from '../assets/images/logo-frontend-mentor.svg?react'
+
 import './Home.css'
 
 function Home() { 
@@ -19,6 +24,12 @@ function Home() {
                      myself accountable, and hopefully inspire anyone 
                      else who’s learning to code. Welcome to my corner 
                      of the internet, and thanks for stopping by!</p>
+                     <div className="icons">
+                        < Twitter className="icon" />
+                        < GitHub className="icon" />
+                        < LinkedIn className="icon" />
+                        < FrontEnd className="icon" />
+                     </div>
             </div>
         </div>
         </>

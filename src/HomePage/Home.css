@@ -25,3 +25,17 @@
     margin-bottom:24px;
 
 }
+
+.icons { 
+    display:flex;
+    flex-direction:row;
+    gap:20px;
+}
+
+.icons .icon { 
+    padding:20px;
+    background:var(--background-color);
+    color:blue;
+    border-radius:8px;
+}
+
