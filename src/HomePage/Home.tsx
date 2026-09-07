@@ -25,10 +25,18 @@ function Home() {
                      else who’s learning to code. Welcome to my corner 
                      of the internet, and thanks for stopping by!</p>
                      <div className="icons">
+                        <div className="icon-container">
                         < Twitter className="icon" />
+                        </div>
+                        <div className="icon-container">
                         < GitHub className="icon" />
+                        </div>
+                        <div className="icon-container">
                         < LinkedIn className="icon" />
+                        </div>
+                        <div className="icon-container">
                         < FrontEnd className="icon" />
+                        </div>
                      </div>
             </div>
         </div>

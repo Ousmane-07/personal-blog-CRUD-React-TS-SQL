@@ -76,7 +76,7 @@
     --font-header-color:var(--neutral-700);
     --font-paragraph-color:var(--neutral-600);
     --stroke-color:var(--neutral-200); 
-    --icon-color:var(--neutral-700);
+    --icon-color:var(--neutral-0);
 
   }
 
@@ -86,7 +86,7 @@
     --font-header-color:var(--neutral-0);
     --font-paragraph-color:var(--neutral-400);
     --stroke-color:var(--neutral-700);
-    --icon-color:var(--neutral-0);
+    --icon-color:var(--neutral-700);
 
   }
 
@@ -97,7 +97,7 @@ img {
 
 body { 
   font-family: 'DM Sans', sans-serif;
-  background-color:var(--neutral-100);
+  margin: 0;
 }
 
 

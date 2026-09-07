@@ -1,7 +1,6 @@
 .home-wrapper { 
     padding: 0px 348px;
     margin-top:0;
-    height:200px;
 }
 
 .home-container { 
@@ -26,16 +25,33 @@
 
 }
 
+.light-mode { 
+    --icon-color: var(--neutral-700);
+}
+
+.dark-mode { 
+    --icon-color:var(--neutral-0);
+}
+
 .icons { 
     display:flex;
     flex-direction:row;
     gap:20px;
+    color: var(--icon-color);
+
+    
 }
 
-.icons .icon { 
-    padding:20px;
-    background:var(--background-color);
-    color:blue;
+.icon-container { 
+    padding:7px;
+    background:blue;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:var(--navigation-bar-color);
     border-radius:8px;
+    border:1px solid var(--stroke-color);
 }
+
+
 
