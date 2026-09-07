@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import profilePic from '../assets/images/image-avatar.jpg'
 import moon from '../assets/images/icon-moon.svg'
 import sun from '../assets/images/icon-sun.svg'
@@ -19,10 +20,10 @@ function Nav({toggleTheme, isDark}: NavProperties) {
                 <img src={profilePic} alt="" />
              </div>
              <div className="links">
-                <p>Home</p>
-                <p>Blog</p>
-                <p>About</p>
-                <p>Newsletter</p>
+                <Link to= "/" className="route">Home</Link>
+                <Link to= "/" className="route">Blog</Link>
+                <Link to= "/" className="route">About</Link>
+                <Link to= "/" className="route">Newsletter</Link>
                 <div className="theme-container" onClick={toggleTheme}>
                 {!isDark ? <img src={moon} alt="" /> : <img src={sun} alt="" /> }
                 </div>
