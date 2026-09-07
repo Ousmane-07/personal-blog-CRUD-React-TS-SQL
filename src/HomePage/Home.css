@@ -1,0 +1,27 @@
+.home-wrapper { 
+    padding: 0px 348px;
+    margin-top:0;
+    height:200px;
+}
+
+.home-container { 
+        max-width:620px;
+        border-left:2px solid var(--stroke-color);
+        border-right:2px solid var(--stroke-color);
+        padding:40px 10px;
+        margin:0 auto;
+}
+
+.home-container h1 { 
+    font-size:var(--fs-32);
+    font-weight:800;
+    margin-bottom:24px;
+    color:var(--font-header-color);
+}
+
+.home-container p { 
+    font-size:var(--fs-18);
+    color:var(--font-paragraph-color);
+    margin-bottom:24px;
+
+}
