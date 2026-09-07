@@ -21,9 +21,9 @@ function Nav({toggleTheme, isDark}: NavProperties) {
              </div>
              <div className="links">
                 <Link to= "/" className="route">Home</Link>
-                <Link to= "/" className="route">Blog</Link>
-                <Link to= "/" className="route">About</Link>
-                <Link to= "/" className="route">Newsletter</Link>
+                <Link to= "blog" className="route">Blog</Link>
+                <Link to= "about" className="route">About</Link>
+                <Link to= "newsletter" className="route">Newsletter</Link>
                 <div className="theme-container" onClick={toggleTheme}>
                 {!isDark ? <img src={moon} alt="" /> : <img src={sun} alt="" /> }
                 </div>
