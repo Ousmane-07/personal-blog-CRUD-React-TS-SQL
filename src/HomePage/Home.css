@@ -38,7 +38,7 @@
     flex-direction:row;
     gap:20px;
     color: var(--icon-color);
-
+    margin-bottom:40px;
     
 }
 
@@ -51,6 +51,13 @@
     background:var(--navigation-bar-color);
     border-radius:8px;
     border:1px solid var(--stroke-color);
+}
+
+.break-section { 
+    width:100%;
+    margin:0 auto;
+    border:1px solid var(--stroke-color);
+
 }
 
 

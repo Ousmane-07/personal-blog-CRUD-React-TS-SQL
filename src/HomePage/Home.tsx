@@ -38,6 +38,9 @@ function Home() {
                         < FrontEnd className="icon" />
                         </div>
                      </div>
+                     <div className="break-section">
+                        
+                     </div>
             </div>
         </div>
         </>
