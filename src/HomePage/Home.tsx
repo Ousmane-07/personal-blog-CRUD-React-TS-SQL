@@ -1,12 +1,31 @@
+import { useEffect, useState } from "react";
 import Twitter from '../assets/images/logo-x.svg?react'
 import GitHub from '../assets/images/logo-github.svg?react'
 import LinkedIn from '../assets/images/logo-linkedin.svg?react'
 import FrontEnd from '../assets/images/logo-frontend-mentor.svg?react'
+'./Home.css'
 
-import './Home.css'
+type Post = { 
+    id: number;
+    title: string; 
+    slug: string;
+    published_at: string;
+}
 
 function Home() { 
 
+    const [posts, setPosts] = useState<Post[]>([])
+
+    useEffect(() => { 
+
+        async function getPosts() { 
+            const response = await fetch("http://localhost:3000/api/posts")
+
+            const data = await response.json();
+
+            setPosts(data);
+        }
+    })
     return ( 
         <>
         <div className="home-wrapper">
@@ -39,9 +58,19 @@ function Home() {
                         </div>
                      </div>
                      <div className="break-section">
-                        
+
                      </div>
             </div>
+                <div className="latest-articles">
+                    <h1>Latest Articles</h1>
+
+                    {posts.map((post) => (
+                        <div className="article" key={post.id}>
+                            <h3>{post.title}</h3>
+                            <p>{post.published_at}</p>
+                        </div>
+                    ))}
+                    </div>
         </div>
         </>
     )
